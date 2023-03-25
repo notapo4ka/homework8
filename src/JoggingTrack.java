@@ -5,12 +5,12 @@ public class JoggingTrack extends Obstacle {
     }
 
     @Override
-    public String overcome(Member member) {
-        return member.getName() + " пробіг бігову доріжку";
+    public String overcome(Participant participant) {
+        return participant.getName() + " пробіг бігову доріжку";
     }
 
     @Override
-    public String obstacleName() {
+    public String getObstacleName() {
         return "Бігова доріжка";
     }
 }
