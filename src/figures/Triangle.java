@@ -11,7 +11,7 @@ public class Triangle implements GeometryFigure {
     }
 
     @Override
-    public double areaOfFigure() {
+    public double getArea() {
         if (base < 0 || height < 0) {
             return 0;
         }
