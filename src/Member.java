@@ -1,9 +1,9 @@
 import java.util.Objects;
 
-abstract class Member {
+abstract class Participant {
     String name;
 
-    public Member(String name) {
+    public Participant(String name) {
         Objects.requireNonNull(name, "Parameter [name] must not be null");
         this.name = name;
     }
@@ -16,7 +16,7 @@ abstract class Member {
 
     public abstract String jump();
 
-    public abstract boolean obstacleRun(int length);
+    public abstract boolean canRun(int length);
 
-    public abstract boolean obstacleJump(int height);
+    public abstract boolean canJump(int height);
 }
