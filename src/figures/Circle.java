@@ -9,7 +9,7 @@ public class Circle implements GeometryFigure {
     }
 
     @Override
-    public double areaOfFigure() {
+    public double getArea() {
         if (radius < 0) {
             return 0;
         }
