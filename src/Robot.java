@@ -1,4 +1,4 @@
-public class Robot extends Member {
+public class Robot extends Participant {
 
     final int restrictOfRun = 1000;
     final int restrictOfJump = 1;
@@ -18,12 +18,12 @@ public class Robot extends Member {
     }
 
     @Override
-    public boolean obstacleRun(int length) {
+    public boolean canRun(int length) {
         return length <= restrictOfRun;
     }
 
     @Override
-    public boolean obstacleJump(int height) {
+    public boolean canJump(int height) {
         return height <= restrictOfJump;
     }
 }
