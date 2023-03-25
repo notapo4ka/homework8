@@ -5,12 +5,12 @@ public class Wall extends Obstacle {
     }
 
     @Override
-    public String overcome(Member member) {
-        return member.getName() + " перестрибнув стінку";
+    public String overcome(Participant participant) {
+        return participant.getName() + " перестрибнув стінку";
     }
 
     @Override
-    public String obstacleName() {
+    public String getObstacleName() {
         return "Стіна";
     }
 }
