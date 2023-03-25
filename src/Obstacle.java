@@ -1,15 +1,19 @@
 abstract class Obstacle {
-    public int lengthOrHeight = 0;
+    private int difficulty = 0;
 
-    public Obstacle(int lengthOrHeight) {
-        this.lengthOrHeight = lengthOrHeight;
+    public Obstacle(int difficulty) {
+        this.difficulty = difficulty;
     }
 
-    public int getLengthOrHeight() {
-        return lengthOrHeight;
+    public int getDifficulty() {
+        return difficulty;
     }
 
-    public abstract String overcome(Member member);
+    public void setDifficulty(int difficulty) {
+        this.difficulty = difficulty;
+    }
 
-    public abstract String obstacleName();
+    public abstract String overcome(Participant participant);
+
+    public abstract String getObstacleName();
 }
