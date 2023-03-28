@@ -2,10 +2,17 @@ import java.util.Objects;
 
 abstract class Participant {
     String name;
+    int restrictOfRun;
+    int restrictOfJump;
 
-    public Participant(String name) {
+    public Participant(String name, int restrictOfRun, int restrictOfJump) {
         Objects.requireNonNull(name, "Parameter [name] must not be null");
+        if (restrictOfRun <= 0 || restrictOfJump <= 0) {
+            System.out.println("Parameters [restrictOfRun] and [restrictOfJump] must be greater than 0");
+        }
         this.name = name;
+        this.restrictOfRun = restrictOfRun;
+        this.restrictOfJump = restrictOfJump;
     }
 
     public String getName() {
@@ -16,7 +23,11 @@ abstract class Participant {
 
     public abstract String jump();
 
-    public abstract boolean canRun(int length);
+    public boolean canRun(int length) {
+        return length <= restrictOfRun;
+    }
 
-    public abstract boolean canJump(int height);
+    public boolean canJump(int height) {
+        return height <= restrictOfJump;
+    }
 }
