@@ -1,10 +1,7 @@
 public class Robot extends Participant {
 
-    final int restrictOfRun = 1000;
-    final int restrictOfJump = 1;
-
-    public Robot(String name) {
-        super(name);
+    public Robot(String name, int restrictOfRun, int restrictOfJump) {
+        super(name, restrictOfRun, restrictOfJump);
     }
 
     @Override
@@ -19,11 +16,11 @@ public class Robot extends Participant {
 
     @Override
     public boolean canRun(int length) {
-        return length <= restrictOfRun;
+        return super.canRun(length);
     }
 
     @Override
     public boolean canJump(int height) {
-        return height <= restrictOfJump;
+        return super.canJump(height);
     }
 }
