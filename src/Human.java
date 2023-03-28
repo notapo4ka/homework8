@@ -1,10 +1,7 @@
 public class Human extends Participant {
 
-    final int restrictOfRun = 500;
-    final int restrictOfJump = 4;
-
-    public Human(String name) {
-        super(name);
+    public Human(String name, int restrictOfRun, int restrictOfJump) {
+        super(name, restrictOfRun, restrictOfJump);
     }
 
     @Override
@@ -19,11 +16,11 @@ public class Human extends Participant {
 
     @Override
     public boolean canRun(int length) {
-        return length <= restrictOfRun;
+        return super.canRun(length);
     }
 
     @Override
     public boolean canJump(int height) {
-        return height <= restrictOfJump;
+        return super.canJump(height);
     }
 }
