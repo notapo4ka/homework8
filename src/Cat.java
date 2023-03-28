@@ -1,11 +1,9 @@
 public class Cat extends Participant {
 
-    final int restrictOfRun = 15;
-    final int restrictOfJump = 2;
-
-    public Cat(String name) {
-        super(name);
+    public Cat(String name, int restrictOfRun, int restrictOfJump) {
+        super(name, restrictOfRun, restrictOfJump);
     }
+
 
     @Override
     public String run() {
@@ -19,11 +17,11 @@ public class Cat extends Participant {
 
     @Override
     public boolean canRun(int length) {
-        return length <= restrictOfRun;
+        return super.canRun(length);
     }
 
     @Override
     public boolean canJump(int height) {
-        return height <= restrictOfJump;
+        return super.canJump(height);
     }
 }
