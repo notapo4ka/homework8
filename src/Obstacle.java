@@ -1,5 +1,5 @@
 abstract class Obstacle {
-    private int difficulty = 0;
+    private int difficulty;
 
     public Obstacle(int difficulty) {
         this.difficulty = difficulty;
