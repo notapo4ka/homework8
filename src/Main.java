@@ -8,9 +8,9 @@ public class Main {
         figures[1] = new Square(2);
         figures[2] = new Triangle(5, 4);
         Participant[] participants = new Participant[3];
-        participants[0] = new Human("Sam");
-        participants[1] = new Cat("Huggy");
-        participants[2] = new Robot("B-El8");
+        participants[0] = new Human("Sam", 200, 5);
+        participants[1] = new Cat("Huggy", 15, 4);
+        participants[2] = new Robot("B-El8", 1000, 6);
         Obstacle[] obstacles = new Obstacle[2];
         obstacles[0] = new JoggingTrack(15);
         obstacles[1] = new Wall(4);
@@ -21,7 +21,7 @@ public class Main {
 
         System.out.println();
 
-        System.out.println("Сумарна площа всіх фігур: " + TotalArea.totalArea(figures));
+        System.out.println("Сумарна площа всіх фігур: " + GeometryFigure.calculateTotalArea(figures));
 
         System.out.println();
 
